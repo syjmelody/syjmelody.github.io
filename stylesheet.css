@@ -203,6 +203,18 @@ sup {
   color: var(--venue);
 }
 
+.project-venue--highlight {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: #3f9a73;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.96em;
+  line-height: 1.25;
+}
+
 .project-venue-links {
   display: flex;
   flex-wrap: wrap;
