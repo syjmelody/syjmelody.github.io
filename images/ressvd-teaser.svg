@@ -1,0 +1,23 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" rx="28" fill="white"/>
+  <rect x="34" y="34" width="572" height="352" rx="22" stroke="#D9D9D9" stroke-width="2"/>
+  <rect x="74" y="104" width="176" height="178" rx="16" fill="#F8F8F8" stroke="#D4D4D4" stroke-width="2"/>
+  <rect x="280" y="104" width="78" height="178" rx="16" fill="#FAFAFA" stroke="#D4D4D4" stroke-width="2"/>
+  <rect x="390" y="104" width="176" height="178" rx="16" fill="#F8F8F8" stroke="#D4D4D4" stroke-width="2"/>
+  <path d="M250 193H280" stroke="#8A8A8A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M358 193H390" stroke="#8A8A8A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M111 145H213" stroke="#D0D0D0" stroke-width="16" stroke-linecap="round"/>
+  <path d="M111 193H213" stroke="#183A70" stroke-opacity="0.25" stroke-width="16" stroke-linecap="round"/>
+  <path d="M111 241H213" stroke="#D0D0D0" stroke-width="16" stroke-linecap="round"/>
+  <path d="M307 138V248" stroke="#183A70" stroke-width="10" stroke-linecap="round" stroke-opacity="0.85"/>
+  <path d="M330 138V248" stroke="#183A70" stroke-width="10" stroke-linecap="round" stroke-opacity="0.22"/>
+  <path d="M427 145H529" stroke="#D0D0D0" stroke-width="16" stroke-linecap="round"/>
+  <path d="M427 193H529" stroke="#183A70" stroke-opacity="0.25" stroke-width="16" stroke-linecap="round"/>
+  <path d="M427 241H529" stroke="#D0D0D0" stroke-width="16" stroke-linecap="round"/>
+  <path d="M109 321C158 301 205 301 250 321" stroke="#183A70" stroke-width="3" stroke-linecap="round"/>
+  <path d="M390 321C439 301 486 301 531 321" stroke="#183A70" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 8"/>
+  <text x="76" y="76" fill="#555555" font-family="Georgia, serif" font-size="20">Original</text>
+  <text x="282" y="76" fill="#555555" font-family="Georgia, serif" font-size="20">Low-rank + Residual</text>
+  <text x="392" y="76" fill="#555555" font-family="Georgia, serif" font-size="20">Compressed</text>
+  <text x="74" y="359" fill="#183A70" font-family="Georgia, serif" font-size="28" font-weight="600">ResSVD</text>
+</svg>

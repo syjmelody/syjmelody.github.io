@@ -1,223 +1,182 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Please delete this script if you use this HTML. -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7580334-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-7580334-1');
   </script>
-  <meta name="viewport" content="width=500; text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Siyong Jian | Personal homepage">
+  <title>Siyong Jian</title>
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg">
   <link href="stylesheet.css" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/png" href="images/icon.png">
-  <title>syjmelody</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet'
-    type='text/css'>
 </head>
 
 <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-      <td>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="67%" valign="middle">
-              <p align="center">
-                <name>Siyong Jian 「简思勇」 </name>
-              </p>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1 class="name">Siyong Jian</h1>
+        <p class="bio">
+          Hi! I am currently working with Prof. <a href="https://jinx-ustc.github.io/jinxin.github.io/" target="_blank" rel="noreferrer">Xin Jin</a>
+          and Prof. <a href="https://scholar.google.com/citations?user=_cUfvYQAAAAJ&hl=en" target="_blank" rel="noreferrer">Wenjun Zeng</a> at CVLab, EIT.
+          Previously, I was a research intern at <a href="https://encode-lab.github.io/" target="_blank" rel="noreferrer">ENCODE-Lab</a>, Westlake University,
+          advised by Prof. <a href="https://huanwang.tech/" target="_blank" rel="noreferrer">Huan Wang</a> and <a href="https://siyuanli.github.io/" target="_blank" rel="noreferrer">Siyuan Li</a>.
+          I received my M.S. from Nanjing University and my B.S. from Zhengzhou University. My research focuses on efficient and embodied AI.
+        </p>
 
-              <p> I'm a visiting student at Encode-Lab, Westlake University, under the supervision of Prof. <a
-                  href="https://huanwang.tech/" target="_blank">Huan Wang</a>, focusing on Efficient AI. Previously, I hold an M.S. in Integrated Circuits from Nanjing University. My research interest lies in computer vision and machine learning, with the emphasis on <strong>multimodal general intelligence</strong>. </br>
-            </p>
+        <div class="contact-line" aria-label="Contact links">
+          <a href="mailto:siyongjian@smail.nju.edu.com">
+            <img class="brand-icon" src="images/icons/email.svg" alt="">
+            Email
+          </a>
+          <span class="sep">|</span>
+          <a href="images/wechat-qr.jpg" target="_blank" rel="noreferrer">
+            <img class="brand-icon" src="images/icons/wechat.svg" alt="">
+            WeChat
+          </a>
+          <span class="sep">|</span>
+          <span class="contact-plain">
+            <img class="brand-icon" src="images/icons/linkedin.svg" alt="">
+            LinkedIn
+          </span>
+          <span class="sep">|</span>
+          <a href="https://github.com/syjmelody" target="_blank" rel="noreferrer">
+            <img class="brand-icon" src="images/icons/github.svg" alt="">
+            GitHub
+          </a>
+          <span class="sep">|</span>
+          <a href="https://scholar.google.com/citations?user=BodnjL0AAAAJ&hl=en" target="_blank" rel="noreferrer">
+            <img class="brand-icon" src="images/icons/scholar.svg" alt="">
+            Scholar
+          </a>
+        </div>
+      </div>
 
-            <p>
-              Email: siyongjian@smail.nju.edu.com
-            </p>
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="images/siyong.jpg" alt="Portrait of Siyong Jian">
+      </div>
+    </section>
 
-              <p align=left>
-                <a href="https://scholar.google.com/citations?user=BodnjL0AAAAJ&hl=en" target="_blank">
-                  Google Scholar</a> &nbsp&nbsp/&nbsp&nbsp
+    <section class="section-block">
+      <h2 class="section-title">Publications &amp; Preprints</h2>
+      <p class="author-note"><sup>*</sup> equal contribution &nbsp;&nbsp; <sup>†</sup> corresponding author</p>
 
-                <a href="https://github.com/syjmelody" target="_blank">
-                  Github</a>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="images/ranke-teaser.png" alt="Teaser for RankE">
+        </div>
+        <div class="project-body">
+          <h3>RankE: End-to-End Post-Training for Discrete Text-to-Image Generation with Decoder Co-Evolution</h3>
+          <p class="project-meta"><strong>Siyong Jian</strong><sup>*</sup>, Siyuan Li<sup>*</sup>, Luyuan Zhang<sup>*</sup>, Zedong Wang, Xin Jin, Ying Li, Cheng Tan<sup>†</sup>, Huan Wang<sup>†</sup></p>
+          <p class="project-venue">arXiv, 2026</p>
+          <p class="project-links">
+            <a href="https://syjmelody.github.io/RankE/" target="_blank" rel="noreferrer">Project page</a>
+            <span class="divider">/</span>
+            <a href="https://arxiv.org/abs/2605.21195" target="_blank" rel="noreferrer">arXiv</a>
+            <span class="divider">/</span>
+            <a href="https://github.com/syjmelody/RankE" target="_blank" rel="noreferrer">Code</a>
+          </p>
+          <p class="project-desc">
+            RankE presents an end-to-end post-training framework for discrete text-to-image generation, coupling generator and decoder optimization through decoder co-evolution and reward-driven training.
+          </p>
+        </div>
+      </article>
 
-              </p>
-            </td>
-            <td style="padding:2.5%;width:100%;max-width:100%">
-              <a href="images/siyong.jpg"><img style="width:50%;max-width:100%" alt="profile photo" src="images/siyong.jpg"
-                  class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </table>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="images/cvpr26jacobi.png" alt="Teaser for Parallel Jacobi Decoding">
+        </div>
+        <div class="project-body">
+          <h3>Parallel Jacobi Decoding for Fast Autoregressive Image Generation</h3>
+          <p class="project-meta"> Boya Liao, Ying Li, <strong>Siyong Jian</strong>, Huan Wang</p>
+          <p class="project-venue">CVPR, 2026</p>
+          <p class="project-links">
+            <span class="link-placeholder">paper coming soon</span>
+            <!-- <span class="divider">/</span> -->
+            <!-- <span class="link-placeholder">project page</span> -->
+            <!-- <span class="divider">/</span> -->
+            <!-- <span class="link-placeholder">Code</span> -->
+          </p>
+          <p class="project-desc">
+            A training-free decoding method that refines draft tokens in the 2D spatial domain to accelerate autoregressive image generation while preserving visual fidelity.
+          </p>
+        </div>
+      </article>
 
-        
+      <article class="project-card">
+        <div class="project-media">
+          <img src="images/mergemix-teaser.png" alt="Teaser for MergeMix">
+        </div>
+        <div class="project-body">
+          <h3>MergeMix: A Unified Augmentation Paradigm for Visual and Multi-Modal Understanding</h3>
+          <p class="project-meta">Xin Jin<sup>*</sup>, Siyuan Li<sup>*</sup>, <strong>Siyong Jian</strong>, Kai Yu, Huan Wang</p>
+          <p class="project-venue">ICLR, 2026</p>
+          <p class="project-links">
+            <a href="https://syjmelody.github.io/MergeMix/" target="_blank" rel="noreferrer">Project page</a>
+            <span class="divider">/</span>
+            <a href="https://arxiv.org/abs/2510.23479" target="_blank" rel="noreferrer">arXiv</a>
+            <span class="divider">/</span>
+            <a href="https://github.com/JinXins/MergeMix" target="_blank" rel="noreferrer">Code</a>
+          </p>
+          <p class="project-desc">
+            MergeMix unifies visual augmentation and preference alignment by constructing context-aware mixed samples for both visual and multi-modal understanding.
+          </p>
+        </div>
+      </article>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="100%" valign="middle">
-              <heading>Publication</heading>
-            </td>
+      <article class="project-card">
+        <div class="project-media">
+          <img src="images/ssd-teaser.png" alt="Teaser for SSD project">
+        </div>
+        <div class="project-body">
+          <h3>SSD: Spatial-Semantic Head Decoupling for Efficient Autoregressive Image Generation</h3>
+          <p class="project-meta"><strong>Siyong Jian</strong>, Huan Wang</p>
+          <p class="project-venue">arXiv, 2025</p>
+          <p class="project-links">
+            <a href="https://syjmelody.github.io/SSD/" target="_blank" rel="noreferrer">Project page</a>
+            <span class="divider">/</span>
+            <a href="https://arxiv.org/abs/2510.18716" target="_blank" rel="noreferrer">arXiv</a>
+            <span class="divider">/</span>
+            <a href="https://github.com/syjmelody/SSD" target="_blank" rel="noreferrer">Code</a>
+          </p>
+          <p class="project-desc">
+            A lightweight autoregressive image generation project that decouples spatial and semantic prediction heads to improve efficiency while preserving generation quality.
+          </p>
+        </div>
+      </article>
 
-            <br>
-            <!-- (* denotes equal contribution) -->
+      <article class="project-card">
+        <div class="project-media">
+          <img src="images/erc-svd-teaser.png" alt="Teaser for ERC-SVD">
+        </div>
+        <div class="project-body">
+          <h3>ERC-SVD</h3>
+          <p class="project-meta">Haolei Bai, <strong>Siyong Jian</strong>, Tuo Liang, Yu Yin, Huan Wang</p>
+          <p class="project-venue">CPAL, 2026</p>
+          <p class="project-links">
+            <!-- <span class="link-placeholder">project page</span> -->
+            <!-- <span class="divider">/</span> -->
+            <a href="https://arxiv.org/abs/2510.23479" target="_blank" rel="noreferrer">arXiv</a>
+            <!-- <span class="divider">/</span> -->
+            <!-- <span class="link-placeholder">Code</span> -->
+          </p>
+          <p class="project-desc">
+            ERC-SVD explores efficient representation compression and acceleration with the updated teaser and conference information you provided.
+          </p>
+        </div>
+      </article>
+    </section>
 
-          </tr>
-      
-          <!-- <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td valign="middle" width="100%">
-              <a href="">
-                <papertitle>OmniGen-AR: AutoRegressive Any-to-Image Generation. </papertitle> 
-              </a>
-              <br>
-              <strong>Junke Wang</strong>, Xun Wang, Qiushan Guo, Peize Sun, Weilin Huang, Zuxuan Wu, Yu-Gang Jiang.
-              <br>
-              <em>NeurIPS</em>, 2025.
-              <br>
-            </td>
-          </tr> -->
-
-        </table>
-        <br>
-
-
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-          <tr>
-            <td width="100%" valign="middle">
-              <heading>Preprints</heading>
-            </td>
-          </tr>
-
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td valign="middle" width="100%">
-              <a href="">
-                <papertitle>SSD: Spatial-Semantic Head Decoupling for Efficient Autoregressive Image Generation.
-                </papertitle>
-              </a>
-              <br>
-              <strong>Siyong Jian</strong>, Huan Wang
-              <br>
-              <em>Arxiv</em>, 2025.
-              <br>
-            </td>
-          </tr>
-
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td valign="middle" width="100%">
-              <a href="https://arxiv.org/abs/2505.20112">
-                <papertitle>ResSVD: Residual Compensated SVD for Large Language Model Compression.
-                </papertitle>
-              </a>
-              <br>
-              Haolei Bai, <strong>Siyong Jian</strong>, Tuo Liang, Yu Yin, Huan Wang
-              <br>
-              <em>Arxiv</em>, 2025.
-            </td>
-          </tr>
-
-        </table>
-          <br>
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-              <tr>
-                <td width="100%" valign="middle">
-                  <heading>Projects</heading>
-                </td>
-              </tr>
-
-              <!-- <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
-            <td valign="middle" width="100%">
-              <a href="https://arxiv.org/abs/2504.11455">
-                <papertitle>SimpleAR: Pushing the Frontier of Autoregressive Visual Generation through Pretraining, SFT, and RL.
-                </papertitle> <a href="https://github.com/wdrink/SimpleAR">
-                  [Code]
-                </a>
-              </a>
-              <br>
-              <strong>Junke Wang</strong>, Zhi Tian, Xun Wang, Xinyu Zhang, Weilin Huang, Zuxuan Wu, Yu-Gang Jiang
-              <p style="padding-left: 1em;"> <li> We train a state-of-the-art autoregressive image generation model, outperforming diffusion models with only 0.5B/1.5B parameters. For the first time, we verify the effectiveness of GRPO in visual generation.</li> </p>
-              
-            </td> -->
-          </tr>
-
-        </table>
-
-              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-                <tr>
-                  <td width="100%" valign="middle">
-                    <heading></heading>
-
-                    <p>
-                      <!-- Conference Reviewer for CVPR, ICCV, ICML, NeurIPS, ICLR, ECCV, etal. -->
-                    </p>
-		                <p>
-                      <!-- Journal Reviewer for TPAMI, TIP, IJCV, etal. -->
-                    </p>
-
-
-
-                  </td>
-                </tr>
-              </table>
-
-
-              <br>
-              <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-                <tr>
-                  <td width="100%" valign="middle">
-                    <heading>Selected Awards</heading>
-                    <p>
-                      Academic Star in Fudan University (10 PhD students). 2025.
-                    </p>
-                    <p>
-                      Fundamental Research Program for PhD students, sponsored by NSFC. 2024.
-                    </p>
-                    <p>
-                      Young Elite Scientists Sponsorship Program for PhD students, sponsored by CAAI. 2024.
-                    </p>
-                    <p>
-                      Intel Fellowship. 2023.
-                    </p>
-                    <p>
-                      National Scholarship (Top 1%). 2022.
-                    </p>
-                    <p>
-                      Outstanding graduates in Shanghai (undergrads). 2021.
-                    </p>
-                  </td>
-                </tr>
-              </table> -->
-
-              <table
-                style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                <tbody>
-                  <tr>
-                    <td style="padding:0px">
-                      <p font-size:small;>
-                        <br>
-                        <br>
-                      <div style="float:left;">
-                        Updated at Sep 2025.
-                      </div>
-                      <div style="float:right;">
-                        <a href="https://jonbarron.info">Template</a>
-                      </div>
-                      <br>
-                      <br>
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-      </td>
-    </tr>
-  </table>
+    <footer class="page-footer">
+      <span>Updated on May 22, 2026.</span>
+      <!-- <a href="https://jonbarron.info" target="_blank" rel="noreferrer">Template inspiration</a> -->
+    </footer>
+  </main>
 </body>
-
 </html>

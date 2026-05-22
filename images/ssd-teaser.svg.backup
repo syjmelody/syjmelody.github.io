@@ -1,0 +1,25 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" rx="28" fill="white"/>
+  <rect x="34" y="34" width="572" height="352" rx="22" stroke="#D9D9D9" stroke-width="2"/>
+  <rect x="72" y="92" width="164" height="204" rx="18" fill="#F7F7F7" stroke="#D5D5D5" stroke-width="2"/>
+  <rect x="260" y="92" width="140" height="88" rx="16" fill="#FAFAFA" stroke="#D5D5D5" stroke-width="2"/>
+  <rect x="260" y="208" width="140" height="88" rx="16" fill="#FAFAFA" stroke="#D5D5D5" stroke-width="2"/>
+  <rect x="430" y="92" width="138" height="204" rx="18" fill="#F7F7F7" stroke="#D5D5D5" stroke-width="2"/>
+  <path d="M236 195H260" stroke="#8A8A8A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M400 136H430" stroke="#8A8A8A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M400 252H430" stroke="#8A8A8A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M122 196C151 152 177 144 205 196C177 248 151 240 122 196Z" fill="#EDEDED" stroke="#CFCFCF" stroke-width="2"/>
+  <circle cx="175" cy="176" r="12" fill="#183A70" fill-opacity="0.2" stroke="#183A70" stroke-width="2"/>
+  <circle cx="175" cy="214" r="12" fill="#183A70" fill-opacity="0.2" stroke="#183A70" stroke-width="2"/>
+  <circle cx="175" cy="252" r="12" fill="#183A70" fill-opacity="0.2" stroke="#183A70" stroke-width="2"/>
+  <rect x="282" y="117" width="96" height="12" rx="6" fill="#183A70" fill-opacity="0.16"/>
+  <rect x="282" y="140" width="66" height="12" rx="6" fill="#E0E0E0"/>
+  <rect x="282" y="233" width="96" height="12" rx="6" fill="#183A70" fill-opacity="0.16"/>
+  <rect x="282" y="256" width="66" height="12" rx="6" fill="#E0E0E0"/>
+  <path d="M459 228C483 150 512 134 540 196C520 254 492 266 459 228Z" fill="#EDEDED" stroke="#CFCFCF" stroke-width="2"/>
+  <path d="M454 132C478 108 501 104 542 126" stroke="#183A70" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 10"/>
+  <text x="74" y="68" fill="#555555" font-family="Georgia, serif" font-size="20">Input</text>
+  <text x="282" y="68" fill="#555555" font-family="Georgia, serif" font-size="20">SSD Heads</text>
+  <text x="446" y="68" fill="#555555" font-family="Georgia, serif" font-size="20">Generation</text>
+  <text x="74" y="342" fill="#183A70" font-family="Georgia, serif" font-size="28" font-weight="600">SSD</text>
+</svg>
