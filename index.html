@@ -15,6 +15,14 @@
   <title>Siyong Jian</title>
   <link rel="icon" type="image/svg+xml" href="images/icon.svg">
   <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  <script>
+    window.HOMEPAGE_ANALYTICS = {
+      // Set this after deploying analytics-worker, e.g. https://homepage-analytics.<subdomain>.workers.dev
+      endpoint: '',
+      showPrivacyNote: false
+    };
+  </script>
+  <script src="analytics.js" defer></script>
 </head>
 
 <body>
@@ -25,9 +33,13 @@
         <p class="bio">
           Hi! I am currently working with Prof. <a href="https://jinx-ustc.github.io/jinxin.github.io/" target="_blank" rel="noreferrer">Xin Jin</a>
           and Prof. <a href="https://scholar.google.com/citations?user=_cUfvYQAAAAJ&hl=en" target="_blank" rel="noreferrer">Wenjun Zeng</a> at CVLab, EIT.
-          Previously, I was a research intern at <a href="https://encode-lab.github.io/" target="_blank" rel="noreferrer">ENCODE-Lab</a>, Westlake University,
-          advised by Prof. <a href="https://huanwang.tech/" target="_blank" rel="noreferrer">Huan Wang</a> and <a href="https://siyuanli.github.io/" target="_blank" rel="noreferrer">Siyuan Li</a>.
+          Previously, I was fortunate to work with with Prof. <a href="https://huanwang.tech/" target="_blank" rel="noreferrer">Huan Wang</a> 
+          and <a href="https://siyuanli.github.io/" target="_blank" rel="noreferrer">Siyuan Li</a> 
+          at <a href="https://encode-lab.github.io/" target="_blank" rel="noreferrer">ENCODE-Lab</a>, Westlake University.
           I received my M.S. from Nanjing University and my B.S. from Zhengzhou University. My research focuses on efficient and embodied AI.
+        </p>
+        <p class="research-interests">
+          <strong>Research Interests:</strong> Efficient Generative Models, Embodied AI.
         </p>
 
         <div class="contact-line" aria-label="Contact links">
@@ -74,12 +86,14 @@
         <div class="project-body">
           <h3>RankE: End-to-End Post-Training for Discrete Text-to-Image Generation with Decoder Co-Evolution</h3>
           <p class="project-meta"><strong>Siyong Jian</strong><sup>*</sup>, Siyuan Li<sup>*</sup>, Luyuan Zhang<sup>*</sup>, Zedong Wang, Xin Jin, Ying Li, Cheng Tan<sup>†</sup>, Huan Wang<sup>†</sup></p>
-          <p class="project-venue">arXiv, 2026</p>
-          <p class="project-links">
+          <p class="project-venue-links">
+            <span class="project-venue">arXiv'26</span>
+            <span class="divider">|</span>
+            <!-- <span class="divider">|</span>
             <a href="https://syjmelody.github.io/RankE/" target="_blank" rel="noreferrer">Project page</a>
-            <span class="divider">/</span>
+            <span class="divider">|</span> -->
             <a href="https://arxiv.org/abs/2605.21195" target="_blank" rel="noreferrer">arXiv</a>
-            <span class="divider">/</span>
+            <span class="divider">|</span>
             <a href="https://github.com/syjmelody/RankE" target="_blank" rel="noreferrer">Code</a>
           </p>
           <p class="project-desc">
@@ -95,12 +109,13 @@
         <div class="project-body">
           <h3>Parallel Jacobi Decoding for Fast Autoregressive Image Generation</h3>
           <p class="project-meta"> Boya Liao, Ying Li, <strong>Siyong Jian</strong>, Huan Wang</p>
-          <p class="project-venue">CVPR, 2026</p>
-          <p class="project-links">
-            <span class="link-placeholder">paper coming soon</span>
-            <!-- <span class="divider">/</span> -->
+          <p class="project-venue-links">
+            <span class="project-venue">CVPR'26</span>
+            <span class="divider">|</span>
+            <span class="link-placeholder">Paper coming soon</span>
+            <!-- <span class="divider">|</span> -->
             <!-- <span class="link-placeholder">project page</span> -->
-            <!-- <span class="divider">/</span> -->
+            <!-- <span class="divider">|</span> -->
             <!-- <span class="link-placeholder">Code</span> -->
           </p>
           <p class="project-desc">
@@ -116,12 +131,14 @@
         <div class="project-body">
           <h3>MergeMix: A Unified Augmentation Paradigm for Visual and Multi-Modal Understanding</h3>
           <p class="project-meta">Xin Jin<sup>*</sup>, Siyuan Li<sup>*</sup>, <strong>Siyong Jian</strong>, Kai Yu, Huan Wang</p>
-          <p class="project-venue">ICLR, 2026</p>
-          <p class="project-links">
+          <p class="project-venue-links">
+            <span class="project-venue">ICLR'26</span>
+            <span class="divider">|</span>
+            <!-- <span class="divider">|</span>
             <a href="https://syjmelody.github.io/MergeMix/" target="_blank" rel="noreferrer">Project page</a>
-            <span class="divider">/</span>
+            <span class="divider">|</span> -->
             <a href="https://arxiv.org/abs/2510.23479" target="_blank" rel="noreferrer">arXiv</a>
-            <span class="divider">/</span>
+            <span class="divider">|</span>
             <a href="https://github.com/JinXins/MergeMix" target="_blank" rel="noreferrer">Code</a>
           </p>
           <p class="project-desc">
@@ -137,12 +154,14 @@
         <div class="project-body">
           <h3>SSD: Spatial-Semantic Head Decoupling for Efficient Autoregressive Image Generation</h3>
           <p class="project-meta"><strong>Siyong Jian</strong>, Huan Wang</p>
-          <p class="project-venue">arXiv, 2025</p>
-          <p class="project-links">
+          <p class="project-venue-links">
+            <span class="project-venue">arXiv'25</span>
+            <span class="divider">|</span>
+            <!-- <span class="divider">|</span>
             <a href="https://syjmelody.github.io/SSD/" target="_blank" rel="noreferrer">Project page</a>
-            <span class="divider">/</span>
+            <span class="divider">|</span> -->
             <a href="https://arxiv.org/abs/2510.18716" target="_blank" rel="noreferrer">arXiv</a>
-            <span class="divider">/</span>
+            <span class="divider">|</span>
             <a href="https://github.com/syjmelody/SSD" target="_blank" rel="noreferrer">Code</a>
           </p>
           <p class="project-desc">
@@ -156,14 +175,14 @@
           <img src="images/erc-svd-teaser.png" alt="Teaser for ERC-SVD">
         </div>
         <div class="project-body">
-          <h3>ERC-SVD</h3>
+          <h3>ERC-SVD: Error-Controlled SVD for Large Language Model Compression</h3>
           <p class="project-meta">Haolei Bai, <strong>Siyong Jian</strong>, Tuo Liang, Yu Yin, Huan Wang</p>
-          <p class="project-venue">CPAL, 2026</p>
-          <p class="project-links">
+          <p class="project-venue-links">
+            <span class="project-venue">CPAL'26</span>
+            <span class="divider">|</span>
             <!-- <span class="link-placeholder">project page</span> -->
-            <!-- <span class="divider">/</span> -->
-            <a href="https://arxiv.org/abs/2510.23479" target="_blank" rel="noreferrer">arXiv</a>
-            <!-- <span class="divider">/</span> -->
+            <a href="https://arxiv.org/abs/2505.20112" target="_blank" rel="noreferrer">arXiv</a>
+            <!-- <span class="divider">|</span> -->
             <!-- <span class="link-placeholder">Code</span> -->
           </p>
           <p class="project-desc">
@@ -174,7 +193,11 @@
     </section>
 
     <footer class="page-footer">
-      <span>Updated on May 22, 2026.</span>
+      <span id="last-updated">Updated recently.</span>
+      <span class="footer-analytics" aria-live="polite">
+        Visits: <span id="total-visits">--</span> total · <span id="today-visits">--</span> today
+      </span>
+      <span id="footer-note" class="footer-note" hidden>Analytics logs are stored privately for site maintenance.</span>
       <!-- <a href="https://jonbarron.info" target="_blank" rel="noreferrer">Template inspiration</a> -->
     </footer>
   </main>

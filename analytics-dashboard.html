@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage Analytics Dashboard</title>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  <style>
+    .dashboard {
+      width: min(1080px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 36px 0 48px;
+    }
+
+    .dashboard h1 {
+      margin: 0 0 18px;
+      color: var(--title);
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 18px;
+      background: #fff;
+    }
+
+    .control-grid,
+    .overview-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    label {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font: inherit;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 10px 16px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--link);
+      color: #fff;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0f49b3;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .metric-value {
+      margin-top: 4px;
+      font-size: 1.4rem;
+      color: var(--title);
+      font-weight: 600;
+    }
+
+    .status {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.94rem;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 10px 8px;
+      border-top: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--title);
+      font-weight: 600;
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 760px) {
+      .dashboard {
+        width: min(100vw - 24px, 1080px);
+        padding-top: 24px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="dashboard">
+    <h1>Homepage Analytics Dashboard</h1>
+
+    <section class="panel">
+      <div class="control-grid">
+        <div>
+          <label for="endpoint">Worker Endpoint</label>
+          <input id="endpoint" type="url" placeholder="https://your-worker.workers.dev">
+        </div>
+        <div>
+          <label for="token">Admin Token</label>
+          <input id="token" type="password" placeholder="Bearer token">
+        </div>
+      </div>
+      <button id="load-btn" type="button">Load Dashboard</button>
+      <div id="status" class="status">Enter endpoint and token, then load.</div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Overview</h2>
+      <div id="overview" class="overview-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Daily (Last 30 Days)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>PV</th>
+            <th>UV</th>
+          </tr>
+        </thead>
+        <tbody id="daily-body"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Weekly (Last 12 Weeks)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>PV</th>
+            <th>UV</th>
+          </tr>
+        </thead>
+        <tbody id="weekly-body"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Monthly (Last 12 Months)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>PV</th>
+            <th>UV</th>
+          </tr>
+        </thead>
+        <tbody id="monthly-body"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Top Countries (Last 30 Days)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>PV</th>
+            <th>UV</th>
+          </tr>
+        </thead>
+        <tbody id="countries-body"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Top Pages (Last 30 Days)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Path</th>
+            <th>PV</th>
+            <th>UV</th>
+          </tr>
+        </thead>
+        <tbody id="pages-body"></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2 class="section-title">Recent Visits</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Path</th>
+            <th>IP</th>
+            <th>Country</th>
+            <th>User-Agent</th>
+          </tr>
+        </thead>
+        <tbody id="visits-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    const endpointInput = document.getElementById('endpoint');
+    const tokenInput = document.getElementById('token');
+    const loadBtn = document.getElementById('load-btn');
+    const statusNode = document.getElementById('status');
+
+    endpointInput.value = localStorage.getItem('analytics_endpoint') || '';
+    tokenInput.value = sessionStorage.getItem('analytics_token') || '';
+
+    function setStatus(message) {
+      statusNode.textContent = message;
+    }
+
+    function escapeHtml(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function renderOverview(overview) {
+      const items = [
+        ['Total PV', overview.total_pv],
+        ['Today PV', overview.today_pv],
+        ['Today UV', overview.today_uv],
+        ['Last 7 Days PV', overview.last_7d_pv],
+        ['Last 7 Days UV', overview.last_7d_uv],
+        ['Last 30 Days PV', overview.last_30d_pv],
+        ['Last 30 Days UV', overview.last_30d_uv]
+      ];
+
+      document.getElementById('overview').innerHTML = items.map(([label, value]) => `
+        <div class="metric">
+          <div class="metric-label">${label}</div>
+          <div class="metric-value">${Number(value || 0).toLocaleString()}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderRows(targetId, rows) {
+      const body = document.getElementById(targetId);
+      body.innerHTML = rows.map((row) => `
+        <tr>
+          <td>${escapeHtml(row.bucket)}</td>
+          <td>${Number(row.pv || 0).toLocaleString()}</td>
+          <td>${Number(row.uv || 0).toLocaleString()}</td>
+        </tr>
+      `).join('') || '<tr><td colspan="3">No data yet.</td></tr>';
+    }
+
+    function renderVisits(rows) {
+      const body = document.getElementById('visits-body');
+      body.innerHTML = rows.map((row) => `
+        <tr>
+          <td>${escapeHtml(row.visited_at)}</td>
+          <td class="mono">${escapeHtml(row.path || '/')}</td>
+          <td class="mono">${escapeHtml(row.ip || '')}</td>
+          <td>${escapeHtml(row.country || '')}</td>
+          <td class="mono">${escapeHtml(row.user_agent || '')}</td>
+        </tr>
+      `).join('') || '<tr><td colspan="5">No data yet.</td></tr>';
+    }
+
+    async function loadDashboard() {
+      const endpoint = endpointInput.value.trim().replace(/\/+$/, '');
+      const token = tokenInput.value.trim();
+
+      if (!endpoint || !token) {
+        setStatus('Endpoint and token are both required.');
+        return;
+      }
+
+      localStorage.setItem('analytics_endpoint', endpoint);
+      sessionStorage.setItem('analytics_token', token);
+      setStatus('Loading...');
+
+      try {
+        const headers = { Authorization: `Bearer ${token}` };
+        const [summaryRes, visitsRes] = await Promise.all([
+          fetch(`${endpoint}/api/admin/summary`, { headers }),
+          fetch(`${endpoint}/api/admin/visits?limit=50`, { headers })
+        ]);
+
+        if (!summaryRes.ok || !visitsRes.ok) {
+          throw new Error('Request failed. Check endpoint/token/CORS settings.');
+        }
+
+        const summary = await summaryRes.json();
+        const visits = await visitsRes.json();
+
+        renderOverview(summary.overview || {});
+        renderRows('daily-body', summary.daily || []);
+        renderRows('weekly-body', summary.weekly || []);
+        renderRows('monthly-body', summary.monthly || []);
+        renderRows('countries-body', summary.countries || []);
+        renderRows('pages-body', summary.pages || []);
+        renderVisits(visits.visits || []);
+        setStatus('Loaded successfully.');
+      } catch (error) {
+        setStatus(`Load failed: ${error.message}`);
+      }
+    }
+
+    loadBtn.addEventListener('click', loadDashboard);
+  </script>
+</body>
+</html>

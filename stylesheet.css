@@ -83,6 +83,12 @@ a:focus {
   color: var(--text);
 }
 
+.research-interests {
+  margin: 10px 0 0;
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
 .hero-photo-wrap {
   display: flex;
   justify-content: flex-end;
@@ -182,8 +188,7 @@ sup {
 }
 
 .project-meta,
-.project-venue,
-.project-links,
+.project-venue-links,
 .project-desc {
   margin: 0 0 4px;
   font-size: 0.98rem;
@@ -198,7 +203,11 @@ sup {
   color: var(--venue);
 }
 
-.project-links {
+.project-venue-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
   color: var(--muted);
 }
 
@@ -210,12 +219,22 @@ sup {
 .page-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 18px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.footer-analytics {
+  white-space: nowrap;
+}
+
+.footer-note {
+  font-size: 0.88rem;
 }
 
 @media (max-width: 760px) {
@@ -239,7 +258,33 @@ sup {
     height: 178px;
   }
 
+  .section-block {
+    margin-top: 28px;
+  }
+
+  .project-card {
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .project-body h3 {
+    font-size: 1.05rem;
+    line-height: 1.32;
+  }
+
+  .project-meta,
+  .project-venue-links,
+  .project-desc,
+  .research-interests {
+    font-size: 0.95rem;
+  }
+
   .page-footer {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-analytics {
+    white-space: normal;
   }
 }

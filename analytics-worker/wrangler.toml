@@ -1,0 +1,16 @@
+name = "homepage-analytics"
+main = "src/index.js"
+compatibility_date = "2026-05-22"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "homepage-analytics"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[vars]
+TZ_OFFSET_HOURS = "8"
+STORE_RAW_IP = "true"
+PUBLIC_SITE_ORIGINS = "https://syjmelody.github.io"
+
+[secrets]
+required = ["ADMIN_TOKEN", "IP_SALT"]
