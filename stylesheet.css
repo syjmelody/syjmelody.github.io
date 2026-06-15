@@ -270,7 +270,9 @@ sup {
 }
 
 .footer-analytics {
+  margin-left: auto;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .footer-note {

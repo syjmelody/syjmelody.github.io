@@ -16,8 +16,12 @@
   function updateVisitCounters(total, today) {
     var totalNode = document.getElementById('total-visits');
     var todayNode = document.getElementById('today-visits');
+    var todayWrap = document.getElementById('today-visit-wrap');
     if (totalNode && typeof total === 'number') totalNode.textContent = total.toLocaleString();
-    if (todayNode && typeof today === 'number') todayNode.textContent = today.toLocaleString();
+    if (todayNode && typeof today === 'number') {
+      todayNode.textContent = today.toLocaleString();
+      if (todayWrap) todayWrap.hidden = false;
+    }
   }
 
   function togglePrivacyNote() {
