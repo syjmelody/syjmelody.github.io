@@ -1,5 +1,6 @@
 :root {
-  --bg: #ffffff;
+  --bg: #eeeeee;
+  --paper: #ffffff;
   --text: #22252b;
   --muted: #5d6470;
   --line: #d7dce5;
@@ -53,28 +54,39 @@ a:focus {
 }
 
 .page {
-  width: min(860px, calc(100vw - 32px));
-  margin: 0 auto;
-  padding: 40px 0 36px;
+  width: min(960px, calc(100vw - 56px));
+  min-height: 1120px;
+  margin: 30px auto;
+  padding: 44px 50px 38px;
+  background: var(--paper);
+  border: 1px solid rgba(20, 33, 61, 0.08);
+  box-shadow: 0 6px 24px rgba(18, 43, 109, 0.18);
 }
 
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 160px;
   gap: 24px;
-  align-items: start;
+  align-items: center;
 }
 
 .hero-copy {
   padding-top: 2px;
 }
 
+.hero-header {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e3e7ee;
+}
+
 .name {
-  margin: 0 0 14px;
-  font-size: 2.2rem;
+  margin: 0;
+  font-size: 2.3rem;
   font-weight: 600;
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--title);
+  letter-spacing: -0.02em;
 }
 
 .bio {
@@ -83,17 +95,33 @@ a:focus {
   color: var(--text);
 }
 
+.intro-card {
+  margin-top: 0;
+  padding: 16px 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.intro-title {
+  display: none;
+}
+
 .research-interests {
-  margin: 10px 0 0;
+  margin: 12px 0 0;
   font-size: 0.98rem;
   color: var(--muted);
+  padding: 0 0 10px;
+  border-bottom: 1px solid #eef1f5;
 }
 
 .hero-photo-wrap {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding-top: 26px;
+  align-items: center;
+  height: 100%;
+  padding-top: 0;
 }
 
 .hero-photo {
@@ -102,19 +130,19 @@ a:focus {
   object-fit: cover;
   object-position: center 18%;
   border-radius: 16px;
-  border: 1px solid rgba(34, 37, 43, 0.06);
-  box-shadow: 0 1px 4px rgba(20, 33, 61, 0.04);
+  border: 1px solid rgba(34, 37, 43, 0.08);
+  box-shadow: 0 8px 20px rgba(20, 33, 61, 0.08);
   background: #ffffff;
 }
 
 .contact-line {
-  margin-top: 16px;
+  margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.94rem;
 }
 
 .contact-line a,
@@ -251,8 +279,11 @@ sup {
 
 @media (max-width: 760px) {
   .page {
-    width: min(100vw - 24px, 860px);
-    padding-top: 28px;
+    width: min(100vw - 18px, 960px);
+    min-height: auto;
+    margin: 9px auto;
+    padding: 26px 18px 28px;
+    box-shadow: 0 3px 14px rgba(18, 43, 109, 0.14);
   }
 
   .hero,
@@ -284,10 +315,22 @@ sup {
     line-height: 1.32;
   }
 
+  .name {
+    font-size: 2rem;
+  }
+
   .project-meta,
   .project-venue-links,
   .project-desc,
   .research-interests {
+    font-size: 0.95rem;
+  }
+
+  .intro-card {
+    padding: 14px 0 0;
+  }
+
+  .intro-title {
     font-size: 0.95rem;
   }
 
@@ -298,5 +341,21 @@ sup {
 
   .footer-analytics {
     white-space: normal;
+  }
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff;
+  }
+
+  .page {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
   }
 }
