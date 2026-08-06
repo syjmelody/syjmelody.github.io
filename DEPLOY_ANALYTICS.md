@@ -2,7 +2,7 @@
 
 This repository now contains:
 
-- public counter in the homepage footer
+- public counter in the homepage footer, including total visits and today's unique visitors
 - a Cloudflare Worker backend
 - a D1 database schema
 - a lightweight admin dashboard

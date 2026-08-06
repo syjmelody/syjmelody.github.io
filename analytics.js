@@ -13,14 +13,14 @@
     }).format(modified) + '.';
   }
 
-  function updateVisitCounters(total, today) {
+  function updateVisitCounters(total, todayVisitors) {
     var totalNode = document.getElementById('total-visits');
-    var todayNode = document.getElementById('today-visits');
-    var todayWrap = document.getElementById('today-visit-wrap');
+    var todayNode = document.getElementById('today-visitors');
+    var todayWrap = document.getElementById('today-visitor-wrap');
     var todaySeparator = document.querySelector('.visit-separator');
     if (totalNode && typeof total === 'number') totalNode.textContent = total.toLocaleString();
-    if (todayNode && typeof today === 'number') {
-      todayNode.textContent = today.toLocaleString();
+    if (todayNode && typeof todayVisitors === 'number') {
+      todayNode.textContent = todayVisitors.toLocaleString();
       if (todayWrap) todayWrap.hidden = false;
       if (todaySeparator) todaySeparator.hidden = false;
     } else {
@@ -60,7 +60,7 @@
 
       var data = await response.json();
       if (data && data.ok) {
-        updateVisitCounters(data.totalVisits, data.todayVisits);
+        updateVisitCounters(data.totalVisits, data.todayVisitors);
         return true;
       }
     } catch (error) {
@@ -101,7 +101,7 @@
       if (!response.ok) return;
       var data = await response.json();
       if (data && data.ok) {
-        updateVisitCounters(data.totalVisits, data.todayVisits);
+        updateVisitCounters(data.totalVisits, data.todayVisitors);
         updatedFromVisit = true;
       }
     } catch (error) {

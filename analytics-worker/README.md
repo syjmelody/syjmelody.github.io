@@ -2,7 +2,7 @@
 
 This worker is designed for a static GitHub Pages homepage:
 
-- public footer shows **total visits** and **today's visits**
+- public footer shows **total visits** and **today's unique visitors**
 - backend stores **IP / hashed IP / country / user agent / path / referer**
 - admin APIs provide **daily / weekly / monthly** PV/UV summaries
 - `analytics-dashboard.html` can be used as a lightweight admin page
@@ -13,6 +13,7 @@ This worker is designed for a static GitHub Pages homepage:
   Record one visit and return:
   - `totalVisits`
   - `todayVisits`
+  - `todayVisitors`
 
 - `GET /api/public-stats`  
   Read-only public counters.

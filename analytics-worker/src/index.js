@@ -210,14 +210,16 @@ async function queryPublicStats(env) {
   const result = await env.DB.prepare(
     `SELECT
       (SELECT COUNT(*) FROM visits) AS totalVisits,
-      (SELECT COUNT(*) FROM visits WHERE date(visited_at, ?) = date('now', ?)) AS todayVisits`
+      (SELECT COUNT(*) FROM visits WHERE date(visited_at, ?) = date('now', ?)) AS todayVisits,
+      (SELECT COUNT(DISTINCT ip_hash) FROM visits WHERE date(visited_at, ?) = date('now', ?)) AS todayVisitors`
   )
-    .bind(modifier, modifier)
+    .bind(modifier, modifier, modifier, modifier)
     .first();
 
   return {
     totalVisits: Number(result?.totalVisits || 0),
-    todayVisits: Number(result?.todayVisits || 0)
+    todayVisits: Number(result?.todayVisits || 0),
+    todayVisitors: Number(result?.todayVisitors || 0)
   };
 }
 
